@@ -1,0 +1,134 @@
+{
+  "original_z_reference_comparison": [
+    {
+      "temperature_k": 300,
+      "pressure_mpa": 10,
+      "published_z": 1.05985282,
+      "original_cells_3_4_z": 1.0582248328202035,
+      "corrected_z": 1.0598528193342671
+    },
+    {
+      "temperature_k": 400,
+      "pressure_mpa": 50,
+      "published_z": 1.24304763,
+      "original_cells_3_4_z": 1.0181536074692679,
+      "corrected_z": 1.2430476300820887
+    },
+    {
+      "temperature_k": 500,
+      "pressure_mpa": 200,
+      "published_z": 1.74461629,
+      "original_cells_3_4_z": 24.38678199818716,
+      "corrected_z": 1.7446162945667256
+    }
+  ],
+  "interpretation": "0.6 km3 initial gas at 298.14 K and 1 bar; pure-H2 gas saturation = 1",
+  "gas_pore_volume_m3": 2807186.110834922,
+  "derived_bulk_volume_m3": 14035930.55417461,
+  "derived_drainage_radius_m": 172.58380490229302,
+  "porosity": 0.2,
+  "temperature_k": 600,
+  "initial_pressure_bar": 500,
+  "bottomhole_pressure_bar": 160,
+  "radial_well": {
+    "permeability_m2": 1e-15,
+    "thickness_m": 30.0,
+    "drainage_radius_m": 172.58380490229302,
+    "well_radius_m": 0.1,
+    "viscosity_pa_s": 2.79e-05,
+    "well_count": 5,
+    "skin": 0.0
+  },
+  "viscosity_status": "2.79e-5 Pa.s retained from original illustrative constant-viscosity model; sensitivity input, not calibrated",
+  "reference_conditions": {
+    "temperature_k": 298.14,
+    "pressure_bar": 1
+  },
+  "source_status": "Prescribed source sensitivities from user's report/notebook; not independently established generation kinetics",
+  "scenarios": {
+    "No replenishment": {
+      "duration_days": 36525.0,
+      "initial_mass_kg": 48764673.20574434,
+      "final_mass_kg": 17240828.584673204,
+      "final_pressure_bar": 160.00000000000009,
+      "produced_kg": 31523844.62107113,
+      "source_kg": 0.0,
+      "leaked_kg": 0.0,
+      "consumed_kg": 0.0,
+      "produced_fraction_of_initial_inventory": 0.6464483928369218,
+      "max_balance_residual_kg": 7.450580596923828e-09,
+      "relative_balance_error": 1.5278643548966038e-16,
+      "rhs_evaluations": 5417
+    },
+    "Notebook source 0.001 km\u00b3/year": {
+      "duration_days": 36525.0,
+      "initial_mass_kg": 48764673.20574434,
+      "final_mass_kg": 17335275.561544288,
+      "final_pressure_bar": 160.92271291904646,
+      "produced_kg": 39556843.17849042,
+      "source_kg": 8127445.534290782,
+      "leaked_kg": 0.0,
+      "consumed_kg": 0.0,
+      "produced_fraction_of_initial_inventory": 0.811178268571494,
+      "max_balance_residual_kg": 4.0978193283081055e-07,
+      "relative_balance_error": 7.20278910165541e-15,
+      "rhs_evaluations": 5489
+    },
+    "Report source 0.0022 kg/s": {
+      "duration_days": 36525.0,
+      "initial_mass_kg": 48764673.20574434,
+      "final_mass_kg": 17321543.02847772,
+      "final_pressure_bar": 160.7885182223403,
+      "produced_kg": 38385802.17726737,
+      "source_kg": 6942672.000000048,
+      "leaked_kg": 0.0,
+      "consumed_kg": 0.0,
+      "produced_fraction_of_initial_inventory": 0.7871641426840452,
+      "max_balance_residual_kg": 7.003545761108398e-07,
+      "relative_balance_error": 1.2572032889454967e-14,
+      "rhs_evaluations": 5513
+    },
+    "Report source 0.0066 kg/s": {
+      "duration_days": 36525.0,
+      "initial_mass_kg": 48764673.20574434,
+      "final_mass_kg": 17481737.471388496,
+      "final_pressure_bar": 162.3546375264452,
+      "produced_kg": 52110951.73435624,
+      "source_kg": 20828016.000000034,
+      "leaked_kg": 0.0,
+      "consumed_kg": 0.0,
+      "produced_fraction_of_initial_inventory": 1.0686209567014533,
+      "max_balance_residual_kg": 3.725290298461914e-07,
+      "relative_balance_error": 5.352990868693746e-15,
+      "rhs_evaluations": 5477
+    },
+    "Report drainage radius 50 m": {
+      "duration_days": 36525.0,
+      "initial_mass_kg": 48764673.20574434,
+      "final_mass_kg": 17240828.5846732,
+      "final_pressure_bar": 160.00000000000006,
+      "produced_kg": 31523844.621071137,
+      "source_kg": 0.0,
+      "leaked_kg": 0.0,
+      "consumed_kg": 0.0,
+      "produced_fraction_of_initial_inventory": 0.6464483928369219,
+      "max_balance_residual_kg": 3.725290298461914e-09,
+      "relative_balance_error": 7.639321774483019e-17,
+      "rhs_evaluations": 5429
+    },
+    "0.6 km\u00b3 interpreted as gas pore volume": {
+      "duration_days": 36525.0,
+      "initial_mass_kg": 10422822986.518824,
+      "final_mass_kg": 8512873285.960505,
+      "final_pressure_bar": 396.687940992983,
+      "produced_kg": 1909949700.558319,
+      "source_kg": 0.0,
+      "leaked_kg": 0.0,
+      "consumed_kg": 0.0,
+      "produced_fraction_of_initial_inventory": 0.18324687112394622,
+      "max_balance_residual_kg": 1.1101365089416504e-06,
+      "relative_balance_error": 1.065101566415867e-16,
+      "rhs_evaluations": 5237
+    }
+  }
+}

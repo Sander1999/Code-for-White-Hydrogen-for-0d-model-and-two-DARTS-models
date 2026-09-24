@@ -1,0 +1,129 @@
+{
+  "config": {
+    "gas_pore_volume_m3": 3600000.0,
+    "temperature_k": 330.0,
+    "initial_pressure_bar": 100.0
+  },
+  "baseline_control": {
+    "duration_days": 3652.5,
+    "production_target_sm3_day": 100000,
+    "bottomhole_pressure_bar": 30.0,
+    "deliverability_sm3_day_bar2": 25.0,
+    "source_sm3_day": 0.0,
+    "leakage_sm3_day_bar": 0.0,
+    "leakage_threshold_bar": 1.01325,
+    "loss_rate_day": 0.0,
+    "radial_well": null,
+    "label": "10-year production"
+  },
+  "standard_conditions": {
+    "pressure_bar": 1.01325,
+    "temperature_k": 288.15
+  },
+  "assumption_status": "Illustrative homogeneous screening model; inputs are not field calibrated",
+  "initial_h2_z": 1.0558477243386775,
+  "initial_h2_density_kg_m3": 6.9584862422740565,
+  "max_pressure_refinement_difference_bar": 2.1357578816605383e-08,
+  "produced_mass_refinement_relative_difference": 3.5614086325494014e-11,
+  "maximum_scenario_relative_mass_balance_error": 5.555662204548484e-15,
+  "scenarios": {
+    "No replenishment": {
+      "duration_days": 3652.5,
+      "initial_mass_kg": 25050550.472186603,
+      "final_mass_kg": 9430917.029567307,
+      "final_pressure_bar": 36.37294967035632,
+      "produced_kg": 15619633.442619214,
+      "source_kg": 0.0,
+      "leaked_kg": 0.0,
+      "consumed_kg": 0.0,
+      "produced_fraction_of_initial_inventory": 0.6235245592691286,
+      "max_balance_residual_kg": 8.475035429000854e-08,
+      "relative_balance_error": 3.3831733312250398e-15,
+      "rhs_evaluations": 5261
+    },
+    "Replenishment 10,000 Sm\u00b3/day": {
+      "duration_days": 3652.5,
+      "initial_mass_kg": 25050550.472186603,
+      "final_mass_kg": 10532065.24543438,
+      "final_pressure_bar": 40.71593286537724,
+      "produced_kg": 17630588.77757369,
+      "source_kg": 3112103.5508213127,
+      "leaked_kg": 0.0,
+      "consumed_kg": 0.0,
+      "produced_fraction_of_initial_inventory": 0.7038004532933826,
+      "max_balance_residual_kg": 1.564621925354004e-07,
+      "relative_balance_error": 5.555662204548484e-15,
+      "rhs_evaluations": 5261
+    },
+    "Replenishment 30,000 Sm\u00b3/day": {
+      "duration_days": 3652.5,
+      "initial_mass_kg": 25050550.472186603,
+      "final_mass_kg": 12551630.640660908,
+      "final_pressure_bar": 48.735326394980405,
+      "produced_kg": 21835230.483989507,
+      "source_kg": 9336310.652463844,
+      "leaked_kg": 0.0,
+      "consumed_kg": 0.0,
+      "produced_fraction_of_initial_inventory": 0.8716467332018497,
+      "max_balance_residual_kg": 1.4528632164001465e-07,
+      "relative_balance_error": 4.225053316537379e-15,
+      "rhs_evaluations": 5249
+    },
+    "First-order loss 0.02/year": {
+      "duration_days": 3652.5,
+      "initial_mass_kg": 25050550.472186603,
+      "final_mass_kg": 8612341.865618637,
+      "final_pressure_bar": 33.157788762264616,
+      "produced_kg": 13731330.415628918,
+      "source_kg": 0.0,
+      "leaked_kg": 0.0,
+      "consumed_kg": 2706878.190939034,
+      "produced_fraction_of_initial_inventory": 0.5481448573704872,
+      "max_balance_residual_kg": 2.2584572434425354e-08,
+      "relative_balance_error": 9.015599261781013e-16,
+      "rhs_evaluations": 5249
+    },
+    "Ideal gas (Z = 1)": {
+      "duration_days": 3652.5,
+      "initial_mass_kg": 26449566.709489405,
+      "final_mass_kg": 9842015.137431843,
+      "final_pressure_bar": 37.21049666156077,
+      "produced_kg": 16607551.57205747,
+      "source_kg": 0.0,
+      "leaked_kg": 0.0,
+      "consumed_kg": 0.0,
+      "produced_fraction_of_initial_inventory": 0.6278950333843889,
+      "max_balance_residual_kg": 9.499490261077881e-08,
+      "relative_balance_error": 3.591548536660797e-15,
+      "rhs_evaluations": 5237
+    },
+    "Half gas pore volume": {
+      "duration_days": 3652.5,
+      "initial_mass_kg": 12525275.236093301,
+      "final_mass_kg": 4022877.9715189897,
+      "final_pressure_bar": 30.938993447250187,
+      "produced_kg": 8502397.26457428,
+      "source_kg": 0.0,
+      "leaked_kg": 0.0,
+      "consumed_kg": 0.0,
+      "produced_fraction_of_initial_inventory": 0.6788191959305976,
+      "max_balance_residual_kg": 3.818422555923462e-08,
+      "relative_balance_error": 3.048573770993992e-15,
+      "rhs_evaluations": 5321
+    },
+    "One-year shut-in + replenishment": {
+      "duration_days": 3652.5,
+      "initial_mass_kg": 25050550.472186603,
+      "final_mass_kg": 10896078.900303677,
+      "final_pressure_bar": 42.15617883149218,
+      "produced_kg": 17266575.12270429,
+      "source_kg": 3112103.5508213127,
+      "leaked_kg": 0.0,
+      "consumed_kg": 0.0,
+      "produced_fraction_of_initial_inventory": 0.6892692893864831,
+      "max_balance_residual_kg": 1.2665987014770508e-07,
+      "relative_balance_error": 4.497440832253535e-15,
+      "rhs_evaluations": 5349
+    }
+  }
+}
