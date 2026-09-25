@@ -1,0 +1,134 @@
+{
+  "Henry_reference": [
+    {
+      "temperature_k": 298.15,
+      "pressure_bar": 1.1,
+      "flash_aqueous_H2": 1.4971505622378467e-05,
+      "Henry_aqueous_H2": 1.5053693782112487e-05,
+      "relative_deviation": -0.0054596673031624965
+    },
+    {
+      "temperature_k": 298.15,
+      "pressure_bar": 5.0,
+      "flash_aqueous_H2": 6.953937507116834e-05,
+      "Henry_aqueous_H2": 7.00051142456463e-05,
+      "relative_deviation": -0.006652930710800531
+    },
+    {
+      "temperature_k": 303.15,
+      "pressure_bar": 1.1,
+      "flash_aqueous_H2": 1.4462659050449901e-05,
+      "Henry_aqueous_H2": 1.4499932189840959e-05,
+      "relative_deviation": -0.002570573358761763
+    },
+    {
+      "temperature_k": 303.15,
+      "pressure_bar": 5.0,
+      "flash_aqueous_H2": 6.77156558517e-05,
+      "Henry_aqueous_H2": 6.796776892361869e-05,
+      "relative_deviation": -0.0037093033346733417
+    },
+    {
+      "temperature_k": 313.15,
+      "pressure_bar": 1.1,
+      "flash_aqueous_H2": 1.3568541889729192e-05,
+      "Henry_aqueous_H2": 1.3510001086214163e-05,
+      "relative_deviation": 0.004333145729704224
+    },
+    {
+      "temperature_k": 313.15,
+      "pressure_bar": 5.0,
+      "flash_aqueous_H2": 6.50631754742441e-05,
+      "Henry_aqueous_H2": 6.485039561894211e-05,
+      "relative_deviation": 0.0032810880068068204
+    }
+  ],
+  "density_reference": [
+    {
+      "temperature_k": 298.15,
+      "pressure_bar": 1.1,
+      "PR_kg_m3": 0.08942473148099953,
+      "NIST_kg_m3": 0.08939364388431079,
+      "relative_deviation": 0.00034776070577202667
+    },
+    {
+      "temperature_k": 298.15,
+      "pressure_bar": 5.0,
+      "PR_kg_m3": 0.40603573631066064,
+      "NIST_kg_m3": 0.4054050392405144,
+      "relative_deviation": 0.0015557208448315762
+    },
+    {
+      "temperature_k": 298.15,
+      "pressure_bar": 10.0,
+      "PR_kg_m3": 0.8109135204348185,
+      "NIST_kg_m3": 0.8084382588896062,
+      "relative_deviation": 0.0030617817971803074
+    },
+    {
+      "temperature_k": 298.15,
+      "pressure_bar": 30.0,
+      "PR_kg_m3": 2.4179317664538287,
+      "NIST_kg_m3": 2.3971382371449343,
+      "relative_deviation": 0.008674313807475631
+    },
+    {
+      "temperature_k": 303.15,
+      "pressure_bar": 1.1,
+      "PR_kg_m3": 0.08794957723411737,
+      "NIST_kg_m3": 0.0879197931923297,
+      "relative_deviation": 0.00033876378351460623
+    },
+    {
+      "temperature_k": 303.15,
+      "pressure_bar": 5.0,
+      "PR_kg_m3": 0.3993344017465079,
+      "NIST_kg_m3": 0.3987300864507216,
+      "relative_deviation": 0.0015155999417189037
+    },
+    {
+      "temperature_k": 303.15,
+      "pressure_bar": 10.0,
+      "PR_kg_m3": 0.7975228628831916,
+      "NIST_kg_m3": 0.7951506894847689,
+      "relative_deviation": 0.0029833004357449067
+    },
+    {
+      "temperature_k": 303.15,
+      "pressure_bar": 30.0,
+      "PR_kg_m3": 2.377966542462536,
+      "NIST_kg_m3": 2.3580245286970714,
+      "relative_deviation": 0.008457084955127092
+    },
+    {
+      "temperature_k": 313.15,
+      "pressure_bar": 1.1,
+      "PR_kg_m3": 0.08514067156997471,
+      "NIST_kg_m3": 0.08511328437360809,
+      "relative_deviation": 0.00032177346425044107
+    },
+    {
+      "temperature_k": 313.15,
+      "pressure_bar": 5.0,
+      "PR_kg_m3": 0.3865753592922709,
+      "NIST_kg_m3": 0.3860195655316663,
+      "relative_deviation": 0.0014398072280070728
+    },
+    {
+      "temperature_k": 313.15,
+      "pressure_bar": 10.0,
+      "PR_kg_m3": 0.7720306173876459,
+      "NIST_kg_m3": 0.7698481102318305,
+      "relative_deviation": 0.0028349841050570035
+    },
+    {
+      "temperature_k": 313.15,
+      "pressure_bar": 30.0,
+      "PR_kg_m3": 2.301910619583537,
+      "NIST_kg_m3": 2.28353733242627,
+      "relative_deviation": 0.00804597625638337
+    }
+  ],
+  "max_flash_component_closure": 2.220446049250313e-16,
+  "flash_states_checked": 84
+}
