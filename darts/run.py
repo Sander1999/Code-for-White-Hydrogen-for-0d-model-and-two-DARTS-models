@@ -1,6 +1,6 @@
 """Run the native DARTS extraction model and export interpretable results.
 
-From the reservoir-simulation workspace: ./run_darts.sh white_hydrogen/darts/run.py
+From the repository root: "$DARTS_PY" darts/run.py (see README.md).
 Use --methane for the same geometry and well with a pure-CH4 gas baseline.
 """
 from __future__ import annotations
@@ -15,9 +15,9 @@ import sys
 import numpy as np
 from darts.engines import set_num_threads, redirect_darts_output
 
-if str(Path(__file__).resolve().parents[2]) not in sys.path:
-    sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
-from white_hydrogen.visualize_3d import geometry, export_vtk, plot_reservoir_3d
+if str(Path(__file__).resolve().parents[1]) not in sys.path:
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from visualize_3d import geometry, export_vtk, plot_reservoir_3d
 
 try:
     from .model import Model
