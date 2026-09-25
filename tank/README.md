@@ -10,11 +10,12 @@ reproduces the worked scenarios and saved results.
 
 ## Run
 
-From the reservoir simulation project root:
+From this repository's root:
 
 ```bash
-./run_darts.sh white_hydrogen/tank/run_tank.py
-./run_darts.sh -m unittest discover -s white_hydrogen/tank -p test_tank_model.py -v
+export DARTS_PY="/Users/sanderbertdacosta/.local/share/python-envs/darts-py311/bin/python"
+"$DARTS_PY" tank/run_tank.py
+"$DARTS_PY" -m unittest tank.test_tank_model -v
 ```
 
 Select the existing **darts-local** notebook kernel. Its explicit interpreter is
