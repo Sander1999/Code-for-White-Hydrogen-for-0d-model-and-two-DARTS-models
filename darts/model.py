@@ -20,7 +20,7 @@ from darts.physics.properties.basic import ConstFunc, RockCompactionEvaluator
 from darts.physics.properties.density import DensityBasic
 from darts.reservoirs.struct_reservoir import StructReservoir
 
-try:  # Package import and the workspace's generic file-based DARTS runner.
+try:  # Package import and direct script execution.
     from .properties import (CoreyRelativePermeability, GasDensity, MOLAR_MASS_KG_KMOL,
                              bulk_volume_m3, gas_viscosity_cp, initial_gas_mole_fraction,
                              initial_pressure_profile, inventory_from_state, load_config)
