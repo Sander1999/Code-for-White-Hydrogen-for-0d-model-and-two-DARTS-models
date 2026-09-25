@@ -1,7 +1,7 @@
 """Scientific checks of units, reference data, initialization and native source.
 
 Run with the registered DARTS interpreter:
-    python -m unittest white_hydrogen.darts.test_properties
+    "$DARTS_PY" -m unittest darts.test_properties
 """
 import unittest
 
