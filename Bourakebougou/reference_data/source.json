@@ -1,0 +1,19 @@
+{
+  "citation": "Rezaei et al. (2022), Relative permeability of hydrogen and aqueous brines in sandstones and carbonates at reservoir conditions",
+  "paper_doi": "https://doi.org/10.1029/2022GL099433",
+  "data_doi": "https://doi.org/10.6084/m9.figshare.19722520.v1",
+  "license": "CC BY 4.0",
+  "source_file": "1- Relative-Permeability.xlsx",
+  "source_sha256": "ea2c101ba9eaeff63668e4248765d816117eec7c0989445be29b8bd852c7dbc2",
+  "sheet": "Relative Permeability",
+  "range": "U14:W113",
+  "experiment": 6,
+  "rock": "Carbonate C1",
+  "temperature_K": 353.15,
+  "back_pressure_bar": 206.8,
+  "salinity_ppt": 35,
+  "porosity_fraction": 0.1282,
+  "liquid_permeability_md": 3.31,
+  "extraction": "Tabulated history-matched drainage curve from archive; saturation column divided by100 and sorted increasing. These 100 fitted points are not 100 independent experiments. No extrapolated points added.",
+  "use": "Comparison only. Different pressure, temperature, salinity and matrix pore structure from assumed shallow Mali karst; not calibrated field relative permeability."
+}
