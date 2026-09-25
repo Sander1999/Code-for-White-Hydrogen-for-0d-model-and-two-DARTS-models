@@ -1,0 +1,106 @@
+{
+  "model_scope": "Bourakebougou-inspired 3D compositional scenario; no field history match",
+  "open_darts_version": "2.0.0",
+  "parameters": {
+    "nx": 9,
+    "ny": 9,
+    "nz": 9,
+    "length_x_m": 1000.0,
+    "length_y_m": 1000.0,
+    "thickness_m": 45.0,
+    "top_depth_m": 100.0,
+    "gas_water_contact_depth_m": 125.0,
+    "datum_depth_m": 110.0,
+    "datum_pressure_bar": 6.0,
+    "temperature_k": 303.15,
+    "dry_gas_mole_fractions": [
+      0.98,
+      0.01,
+      0.01
+    ],
+    "aqueous_initial_saturation_fraction": 0.95,
+    "porosity": 0.1,
+    "permeability_md": 10.0,
+    "vertical_permeability_ratio": 0.1,
+    "producer_enabled": true,
+    "producer_bhp_bar": 3.0,
+    "producer_depth_m": 107.5,
+    "well_radius_m": 0.1,
+    "well_skin": 0.0,
+    "residual_water_saturation": 0.25,
+    "residual_gas_saturation": 0.02,
+    "gas_relperm_exponent": 2.0,
+    "gas_relperm_endpoint": 0.22,
+    "water_relperm_exponent": 3.0,
+    "capillary_entry_bar": 0.02,
+    "capillary_exponent": 2.0,
+    "capillary_max_bar": 5.0,
+    "rock_compressibility_per_bar": 1e-05,
+    "hydrogen_recharge_kg_day": 0.0,
+    "water_influx_kg_day": 0.0,
+    "aqueous_effective_diffusion_m2_s": 0.0,
+    "runtime_days": 365.0,
+    "first_timestep_days": 0.0001,
+    "max_timestep_days": 2.0,
+    "timestep_multiplier": 1.5,
+    "nonlinear_tolerance": 1e-08,
+    "linear_tolerance": 1e-10,
+    "obl_pressure_step_bar": 0.05,
+    "obl_hydrogen_step": 5e-06,
+    "obl_trace_step": 2.5e-07,
+    "producer_completion_top_m": 105.0,
+    "producer_completion_bottom_m": 110.0
+  },
+  "days": 365.0,
+  "reservoir_cells": 729,
+  "accepted_timesteps": 207,
+  "initial_component_kg": {
+    "H2": 898181.6106140763,
+    "N2": 126620.51583094963,
+    "CH4": 74405.3770680575,
+    "H2O": 2616886244.923656
+  },
+  "remaining_component_kg": {
+    "H2": 893134.2127241221,
+    "N2": 125904.77476874724,
+    "CH4": 73995.55109670044,
+    "H2O": 2616906723.489186
+  },
+  "produced_component_kg": {
+    "H2": 5049.681563351381,
+    "N2": 716.0578443102308,
+    "CH4": 410.02323941942507,
+    "H2O": 350.60962218185654
+  },
+  "supplied_component_kg": {
+    "H2": 0.0,
+    "N2": 0.0,
+    "CH4": 0.0,
+    "H2O": 0.0
+  },
+  "initial_free_H2_kg": 872958.8128822612,
+  "initial_dissolved_H2_kg": 25222.797731826613,
+  "remaining_free_H2_kg": 867943.1378141412,
+  "remaining_dissolved_H2_kg": 25191.07490997824,
+  "final_pressure_mean_bar": 6.354949422418894,
+  "final_pressure_range_bar": [
+    5.697878872031829,
+    7.574829388446693
+  ],
+  "final_H2_rate_kg_day": 13.470765810074884,
+  "final_produced_dry_gas_H2_mole_fraction": 0.9800005390337978,
+  "max_relative_component_balance_error": {
+    "H2": 1.343663153345776e-11,
+    "N2": 1.3672541991326233e-11,
+    "CH4": 2.536803452551677e-11,
+    "H2O": 4.735609047488064e-10
+  },
+  "max_relative_physical_component_balance_error": {
+    "H2": 2.542552505952381e-06,
+    "N2": 2.5018234324724413e-06,
+    "CH4": 2.651261387873966e-06,
+    "H2O": 7.95952789641548e-06
+  },
+  "finite_states": true,
+  "balance_method": "Native OBL accumulation and independent TPFA perforation flux, integrated at accepted backward-Euler timesteps; reservoir storage excludes well storage"
+}
