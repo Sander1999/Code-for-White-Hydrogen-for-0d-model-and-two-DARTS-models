@@ -1,0 +1,27 @@
+{
+  "field": "Bourakébougou, Mali",
+  "primary_source": "https://doi.org/10.1038/s41598-023-38977-y",
+  "evidence_date": "2026-09-24",
+  "observations": {
+    "shallow_gas_dry_mole_fractions_approximate": {"H2": 0.98, "N2": 0.01, "CH4": 0.01},
+    "Bougou_19_shallow_interval_m": [110, 150],
+    "reservoir_description": "Karstified dolomitic carbonate; secondary void space is not adequately represented by plug porosity.",
+    "carbonate_plug_porosity_fraction_range": [0.0021, 0.1432],
+    "reported_historical_hydrogen_flow_m3_day_approximate": 1500,
+    "reported_pressure_bar_initial_and_later": [4.5, 5.0],
+    "reported_pressure_comparison_span_years": 11
+  },
+  "measurement_qualifiers": {
+    "pressure": "Published prose does not resolve gauge versus absolute pressure, wellhead versus downhole location, or pressure datum. These observations are not used as a calibrated downhole boundary condition.",
+    "flow": "Reference pressure and temperature, operating uptime, and a continuous production time series are not specified. No cumulative production is inferred from 1500 m3/day multiplied by 11 years.",
+    "porosity": "Plug measurements are not an effective bulk porosity estimate for karst storage.",
+    "recharge": "Replenishment is the authors' interpretation; its magnitude and contributions from connected gas, dissolved transport, aquifer support and generation remain uncalibrated."
+  },
+  "unconstrained_model_inputs": [
+    "Connected reservoir area and pore volume", "Permeability and anisotropy",
+    "Temperature", "Salinity", "Gas-water contact and capillary curves",
+    "Relative permeability and hysteresis", "Well productivity and operating schedule",
+    "Aquifer connectivity", "Geological hydrogen influx and loss rates"
+  ],
+  "model_use": "Field-informed research scenarios and numerical comparisons; not a reserve estimate or validated production forecast."
+}
