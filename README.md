@@ -1,77 +1,42 @@
-# Bourakébougou compositional hydrogen model
+# White hydrogen models
 
-Open [Bourakebougou_DARTS.ipynb](Bourakebougou_DARTS.ipynb), or run the scripts below.
-This is the third research model and the second DARTS implementation. Its separate
-folder contains the model, fluid properties, configuration, scientific evidence,
-verification and 3D results.
+This repository contains three research models:
 
-## Running and changing the case
+- [tank/](tank/README.md): a uniform, zero-dimensional hydrogen tank.
+- [darts/](darts/README.md): an intermediate three-dimensional gas–water DARTS model.
+- [Bourakebougou/](Bourakebougou/README.md): a Bourakébougou-inspired compositional DARTS model, including its configuration, field evidence, scientific notes, tests, notebook and outputs.
 
-From the reservoir simulation project root:
+The shared [research report](minor%20formation%20of%20hydrogen.docx) and
+[3D plotting/VTK helper](visualize_3d.py) remain at the repository root.
+
+## Run
+
+From this repository's root, use the existing native DARTS environment:
 
 ```bash
-./run_darts.sh white_hydrogen/bourakebougou/run.py
-./run_darts.sh white_hydrogen/bourakebougou/run.py --suite
-./run_darts.sh white_hydrogen/bourakebougou/run.py --config my_case.json --output my_results
-./run_darts.sh white_hydrogen/bourakebougou/validate.py
-./run_darts.sh -m unittest white_hydrogen.bourakebougou.test_properties -v
+export DARTS_PY="/Users/sanderbertdacosta/.local/share/python-envs/darts-py311/bin/python"
+"$DARTS_PY" Bourakebougou/run.py
+"$DARTS_PY" Bourakebougou/run.py --suite
+"$DARTS_PY" darts/run.py --suite
+"$DARTS_PY" tank/run_tank.py
 ```
 
-The notebook reads the completed supplied outputs by default and checks that their
-parameters match its inputs. Set `rerun = True` to recalculate after changing inputs.
-Use the existing `darts-local` kernel. `run.py --days 730` changes the run length.
-Do not infer success from an old figure: each output folder has a completion status.
+Each model writes to its own `output/` directory. Select the `darts-local` kernel
+when opening the notebooks. This native environment uses Python 3.11.16,
+Open-DARTS 2.0.0, NumPy 2.4.6, SciPy 1.17.1, Matplotlib 3.11.2 and IAPWS 1.5.5;
+the installed Open-DARTS/DARTS-flash build is required for the reservoir models.
+The environment and its native sources live outside this repository, under
+`~/.local/share/python-envs/darts-py311` and `~/.local/share/darts-workspace`.
+No separate project environment is needed on this machine.
 
-The base grid is 9 × 9 × 9 over an assumed 1 km × 1 km × 45 m domain, with top depth
-100 m and contact depth 125 m. The assumed gas pressure is 6 bar absolute at 110 m,
-temperature 303.15 K, porosity 0.10 and horizontal permeability 10 mD. Vertical
-permeability is one tenth of horizontal permeability. A central well completes
-105–110 m and operates at 3 bar absolute referenced to 107.5 m. These engineering
-inputs are not presented as measured Bourakébougou values. The published approximate
-dry-gas proportions are 0.98 H₂, 0.01 N₂ and 0.01 CH₄.
+## Check
 
-## Physics
+```bash
+"$DARTS_PY" -m unittest tank.test_tank_model darts.test_properties darts.test_model_3d Bourakebougou.test_properties -v
+"$DARTS_PY" Bourakebougou/validate.py
+"$DARTS_PY" darts/validate.py
+```
 
-The native finite-volume model conserves four components in two mobile phases. A
-compositional flash predicts gas–water exchange; PR gas-mixture density and IAPWS
-water properties provide phase densities and viscosities. Gas viscosity uses a
-dilute-mixture approximation. Relative permeability and capillary parameters are
-assumptions. Hydrostatic initialization, gravity, a capillary transition and a
-resolved water-bearing zone distinguish this model from the intermediate model.
-The fixed physical completion is preserved when the vertical grid changes.
-
-The temperature range is restricted to 290–350 K and accepted cell pressures to
-1.1–100 bar. The base case is fresh water. Unvalidated salt parameters and unsupported
-H₂ caloric data are not used. Molecular diffusion is optional, conservative and
-zero by default; the grid does not resolve metre-scale diffusive boundary layers.
-Hysteresis, explicit karst conduits, heat flow and reaction kinetics are omitted.
-[SCIENCE.md](SCIENCE.md) explains these choices and primary references.
-
-The installed flash requires explicit aqueous evaluators for H₂. Its gas phase uses
-the stable-root label with a hybrid aqueous preference: the maximum-root label can
-drop a gas phase after an auxiliary critical-point search fails on an off-solution
-Newton trial. A regression test retains that trial state and requires strict phase
-and component closure. Native critical-point diagnostics may appear in logs even
-when the flash converges. The runner rejects failed flashes and material balances.
-
-## Scenarios and output
-
-The suite compares closed depletion, prescribed water influx of 100,000 kg/day,
-prescribed H₂ supply of 100 kg/day, and a lower gas-relative-permeability endpoint
-of 0.22. Inputs occur in cells below the initial contact. Water influx and H₂ supply
-are independent sensitivities, not a geological generation law or calibrated aquifer.
-The lower endpoint is informed by a carbonate laboratory analogue; other curve
-parameters remain assumptions. The archived fitted laboratory curve and attribution
-are in `reference_data/`.
-
-Each case exports `history.csv`, `spatial_snapshots.csv`, `summary.json`, native HDF5,
-a native log, `production.png`, `vertical_sections.png`, `reservoir_3d.png`, and
-initial/final VTK volumes. VTK coordinates use metres with depth positive downward.
-The 3D figures expand the vertical scale and display cell-centred orthogonal slices.
-
-The runner records all accepted timesteps and integrates independent perforation
-fluxes using the same backward-Euler time convention as DARTS. `validation.json`
-records component conservation, known inputs, closed-reservoir relaxation and
-refinement differences. `properties_validation.json` contains independent Henry-law
-and NIST property comparisons. The distinction between gas-phase H₂, dissolved H₂
-and cumulative production is preserved in all outputs.
+The validators check numerical conservation and refinement using temporary
+simulation folders, then save a compact report in the corresponding model's
+`output/validation.json`. These checks do not establish field calibration.
