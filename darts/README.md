@@ -7,13 +7,14 @@ The runner and fluid/reservoir definitions are separate Python files in this fol
 
 ## Run
 
-From the reservoir simulation project root, using the existing DARTS environment:
+From this repository's root, using the existing DARTS environment:
 
 ```bash
-./run_darts.sh white_hydrogen/darts/run.py --suite
-./run_darts.sh white_hydrogen/darts/run.py --config my_case.json --output my_results
-./run_darts.sh white_hydrogen/darts/validate.py
-./run_darts.sh -m unittest white_hydrogen.darts.test_properties white_hydrogen.darts.test_model_3d -v
+DARTS_PY="/Users/sanderbertdacosta/.local/share/python-envs/darts-py311/bin/python"
+"$DARTS_PY" darts/run.py --suite
+"$DARTS_PY" darts/run.py --config my_case.json --output my_results
+"$DARTS_PY" darts/validate.py
+"$DARTS_PY" -m unittest darts.test_properties darts.test_model_3d -v
 ```
 
 Select `darts-local` in the notebook. The suite runs pure hydrogen, a methane comparison,
